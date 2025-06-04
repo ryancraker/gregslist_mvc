@@ -1,8 +1,38 @@
 import { Car } from './models/Car.js'
+import { House } from './models/House.js'
 import { EventEmitter } from './utils/EventEmitter.js'
 import { createObservableProxy } from './utils/ObservableProxy.js'
 
 class ObservableAppState extends EventEmitter {
+  houses = [
+    new House({
+      year: 1995,
+      bedrooms: 3,
+      bathrooms: 1,
+      sqft: 900,
+      price: 500000,
+      description: 'Yellow Mid-century modern home with gravel walkways',
+      imgUrl: 'https://plus.unsplash.com/premium_photo-1689609950112-d66095626efb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aG91c2V8ZW58MHx8MHx8fDA%3D'
+    }),
+    new House({
+      year: 2010,
+      bedrooms: 3,
+      bathrooms: 2,
+      sqft: 1200,
+      price: 2500000,
+      description: 'Striking Black and white single family home with abstract architecture',
+      imgUrl: 'https://plus.unsplash.com/premium_photo-1661915661139-5b6a4e4a6fcc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aG91c2V8ZW58MHx8MHx8fDA%3D'
+    }),
+    new House({
+      year: 1885,
+      bedrooms: 1,
+      bathrooms: 0,
+      sqft: 500,
+      price: 850000,
+      description: 'Lovely studio home with plenty of space to raise a family',
+      imgUrl: 'https://images.unsplash.com/photo-1434082033009-b81d41d32e1c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aG91c2V8ZW58MHx8MHx8fDI%3D'
+    }),
+  ]
 
   cars = [
     new Car(
