@@ -20,7 +20,7 @@ class ObservableAppState extends EventEmitter {
       bathrooms: 2,
       sqft: 1200,
       price: 2500000,
-      description: 'Striking Black and white single family home with abstract architecture',
+      description: 'Black and white home w/ abstract design',
       imgUrl: 'https://plus.unsplash.com/premium_photo-1661915661139-5b6a4e4a6fcc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aG91c2V8ZW58MHx8MHx8fDA%3D'
     }),
     new House({
@@ -29,7 +29,7 @@ class ObservableAppState extends EventEmitter {
       bathrooms: 0,
       sqft: 500,
       price: 850000,
-      description: 'Lovely studio home with plenty of space to raise a family',
+      description: 'Lovely studio home with space for family',
       imgUrl: 'https://images.unsplash.com/photo-1434082033009-b81d41d32e1c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aG91c2V8ZW58MHx8MHx8fDI%3D'
     }),
   ]
