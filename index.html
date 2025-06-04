@@ -30,6 +30,49 @@
           <h2>Homes</h2>
         </div>
       </div>
+      <div class="row">
+        <div class="col-md-12">
+          <form onsubmit="app.housesController.submitHouse()">
+            <div class="mb-3">
+              <label for="house-description">House Description</label>
+              <input id="house-description" type="text" placeholder="Tell us briefly about your home..."
+                name="description" required minlength="10" maxlength="55">
+            </div>
+            <div class="mb-3">
+              <label for="house-sqft">House Square Footage</label>
+              <input id="house-sqft" type="number" placeholder="My Home is.." name="sqft" required min="20">
+            </div>
+            <div class="mb-3">
+              <label for="house-price">House Price</label>
+              <input id="house-price" type="number" placeholder="My Home is.." name="price" required min="20">
+            </div>
+            <div class="mb-3">
+              <label for="house-year">Construction Year</label>
+              <input id="house-year" type="number" placeholder="Constructed in..." name="year" required min="1500"
+                max="2025" value="1900">
+            </div>
+            <div class="mb-3">
+              <label for="house-bedrooms">Number of bedrooms</label>
+              <input id="house-bedrooms" type="number" placeholder="There are..." name="bedrooms" value="0" min="0"
+                required>
+            </div>
+            <div class="mb-3">
+              <label for="house-bathrooms">Number of bathrooms</label>
+              <input id="house-bathrooms" type="number" placeholder="There are..." name="bathrooms" value="0" min="0"
+                required>
+            </div>
+            <div class="mb-3">
+              <label for="house-imgUrl">Picture of the House</label>
+              <input id="house-imgUrl" type="text" placeholder="Image url..." name="imgUrl" required>
+            </div>
+            <div class="mb-2">
+              <button class="btn btn-success" type="submit">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </section>
     <section class="container">
       <div id="house-listings" class="row">

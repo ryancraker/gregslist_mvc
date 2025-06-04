@@ -6,8 +6,8 @@ export class House {
     this.year = data.year
     this.bedrooms = data.bedrooms
     this.bathrooms = data.bathrooms
-    this.sqft = data.sqft
-    this.price = data.price
+    this.sqft = parseInt(data.sqft)
+    this.price = parseInt(data.price)
     this.description = data.description
     this.imgUrl = data.imgUrl
     this.listedAt = data.listedAt == undefined ? new Date() : new Date(data.listedAt)
