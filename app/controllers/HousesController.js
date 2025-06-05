@@ -5,7 +5,7 @@ import { getFormData } from "../utils/FormHandler.js";
 export class HousesController {
   constructor() {
     AppState.on('houses', this.drawHouses)
-    this.drawHouses()
+    housesService.loadHouses()
   }
 
   drawHouses() {

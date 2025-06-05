@@ -1,5 +1,6 @@
 import { AppState } from "../AppState.js";
 import { House } from "../models/House.js";
+import { loadState, saveState } from "../utils/Store.js";
 
 class HousesService {
   createHouse(houseData) {
@@ -8,6 +9,7 @@ class HousesService {
     houses.unshift(newHouse)
 
     console.log(AppState.houses);
+    this.saveHouses()
   }
 
   deleteHouse(houseId) {
@@ -16,6 +18,22 @@ class HousesService {
     console.log('index to remove is ', houseIndex);
 
     houses.splice(houseIndex, 1)
+
+    this.saveHouses()
+  }
+
+  saveHouses() {
+    saveState('houses', AppState.houses)
+  }
+
+  loadHouses() {
+    const housesFromLocalStorage = loadState('houses', [House])
+    if (housesFromLocalStorage.length == 0) {
+      AppState.houses = AppState.houses
+    }
+    else {
+      AppState.houses = housesFromLocalStorage
+    }
   }
 }
 

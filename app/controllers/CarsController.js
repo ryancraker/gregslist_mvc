@@ -6,7 +6,7 @@ export class CarsController {
   constructor() {
     AppState.on('cars', this.drawCars)
 
-    console.log('Cars controller is ready 🚓🚗🚙🏎️');
+    // console.log('Cars controller is ready 🚓🚗🚙🏎️');
     // this.drawCars()
     carsService.loadCars()
   }
