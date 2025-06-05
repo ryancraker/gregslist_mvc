@@ -1,4 +1,5 @@
 import { AppState } from "../AppState.js";
+import { housesService } from "../services/HousesService.js";
 import { getFormData } from "../utils/FormHandler.js";
 
 export class HousesController {
@@ -19,9 +20,16 @@ export class HousesController {
     event.preventDefault()
     const formElem = event.target
     const houseData = getFormData(formElem)
-    console.log('house submitted', houseData);
 
     housesService.createHouse(houseData)
     formElem.reset()
+  }
+
+  confirmDelete(houseId) {
+    const confirmed = window.confirm('Are you sure you want to permanently delete this home?')
+    if (!confirmed) { return }
+
+    console.log('deleting house with the id of ', houseId);
+    housesService.deleteHouse(houseId)
   }
 }
